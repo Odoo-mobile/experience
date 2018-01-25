@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="theme_primary">#a24689</color>
+    <color name="theme_primary_dark">#875A7B</color>
+    <color name="theme_primary_medium">#7B5471</color>
+    <color name="theme_accent">#ffffff</color>
+    <color name="theme_secondary">#795548</color>
+    <color name="theme_secondary_dark">#5D4037</color>
+
+    <color name="colorPrimary">@color/theme_primary_dark</color>
+    <color name="colorPrimaryDark">@color/theme_primary_dark</color>
+    <color name="colorAccent">@color/theme_accent</color>
+    <color name="colorAccentTeal">#009688</color>
+
+    <!-- Drawer Properties -->
+
+    <!-- Dimensions -->
+    <dimen name="statusBarHeight">0dp</dimen>
+
+    <!-- Booleans -->
+</resources>

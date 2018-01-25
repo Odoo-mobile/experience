@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="filterDay" type="id">123</item>
+    <item name="filterTags" type="id">124</item>
+    <item name="filterRooms" type="id">125</item>
+</resources>

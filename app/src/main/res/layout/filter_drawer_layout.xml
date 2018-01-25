@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/default_16dp"
+    android:paddingTop="@dimen/default_16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/default_8dp"
+        android:paddingLeft="@dimen/default_16dp"
+        android:paddingRight="@dimen/default_16dp"
+        android:paddingTop="@dimen/default_8dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/default_4dp"
+            android:src="@drawable/ic_action_today"
+            android:tint="@color/odoo_optional" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@string/font_normal"
+            android:text="@string/label_days"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/odoo_optional" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/daysContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/default_8dp"
+        android:paddingLeft="@dimen/default_4dp">
+        <!--To be filled dynamically-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/default_8dp"
+        android:paddingLeft="@dimen/default_16dp"
+        android:paddingRight="@dimen/default_16dp"
+        android:paddingTop="@dimen/default_8dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/default_4dp"
+            android:src="@drawable/ic_local_tags"
+            android:tint="@color/odoo_optional" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@string/font_normal"
+            android:text="@string/label_tags"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/odoo_optional" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tagsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/default_8dp"
+        android:paddingLeft="@dimen/default_4dp">
+        <!--To be filled dynamically-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/default_8dp"
+        android:paddingLeft="@dimen/default_16dp"
+        android:paddingRight="@dimen/default_16dp"
+        android:paddingTop="@dimen/default_8dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/default_4dp"
+            android:src="@drawable/ic_pin_drop"
+            android:tint="@color/odoo_optional" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@string/font_normal"
+            android:text="@string/label_room"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/odoo_optional" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/roomsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/default_8dp"
+        android:paddingLeft="@dimen/default_4dp">
+        <!--To be filled dynamically-->
+    </LinearLayout>
+</LinearLayout>

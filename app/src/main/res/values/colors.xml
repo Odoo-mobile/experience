@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Odoo Theme Colors -->
+
+    <color name="odoo_optional">#00a185</color>
+
+    <!-- Drawer Colors -->
+    <color name="drawer_text_color">#282828</color>
+    <color name="drawer_text_color_selected">#414141</color>
+    <color name="drawer_icon_tint">#808080</color>
+    <color name="drawer_icon_tint_selected">#414141</color>
+    <color name="drawer_background">#ffffffff</color>
+    <color name="drawer_separator_text_color">#acacac</color>
+    <color name="drawer_separator_background">#e5e5e5</color>
+
+    <!-- Android Style Colors -->
+    <color name="android_blue">#33B5E5</color>
+    <color name="android_blue_dark">#0099CC</color>
+    <color name="android_violet">#AA66CC</color>
+    <color name="android_violet_dark">#9933CC</color>
+    <color name="android_green">#99CC00</color>
+    <color name="android_green_dark">#669900</color>
+    <color name="android_orange">#FFBB33</color>
+    <color name="android_orange_dark">#FF8800</color>
+    <color name="android_red">#FF4444</color>
+    <color name="android_red_dark">#CC0000</color>
+    <color name="android_teal">#4DB6AC</color>
+    <color name="android_teal_dark">#004D40</color>
+    <color name="android_pure_white">#ffffff</color>
+
+    <color name="control_pressed">#acacac</color>
+
+    <!--Sponsor Type Colors-->
+    <color name="primary_gold">#FF9800</color>
+    <color name="primary_vip">#3F51B5</color>
+    <color name="primary_platinum">#607D8B</color>
+    <color name="primary_basic">#757575</color>
+
+    <array name="letter_tile_colors">
+        <item>@color/android_blue</item>
+        <item>@color/android_violet_dark</item>
+        <item>@color/android_red</item>
+        <item>@color/android_green_dark</item>
+        <item>@color/android_blue_dark</item>
+        <item>@color/android_orange</item>
+        <item>@color/android_red_dark</item>
+        <item>@color/android_violet</item>
+        <item>@color/android_green</item>
+        <item>@color/android_orange_dark</item>
+    </array>
+
+    <color name="base_chatter_view_background">#f3f3f3</color>
+    <color name="base_chatter_view_note_background">#dadada</color>
+
+</resources>
