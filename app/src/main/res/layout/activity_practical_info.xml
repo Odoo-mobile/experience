@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/banner_practical_info" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/default_16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingLeft="@dimen/default_16dp"
+                    android:paddingRight="@dimen/default_16dp"
+                    android:text="@string/label_getting_there"
+                    android:textColor="@color/android_pure_white"
+                    android:textSize="25sp" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/default_8dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingLeft="@dimen/default_16dp"
+                    android:paddingRight="@dimen/default_16dp"
+                    android:paddingTop="@dimen/default_16dp"
+                    android:text="@string/label_how_to_get_there"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#414141" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingLeft="@dimen/default_16dp"
+                    android:paddingRight="@dimen/default_16dp"
+                    android:text="@string/get_there_address"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="#414141" />
+
+                <!--By Car-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/default_16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/default_8dp"
+                            android:background="@drawable/circle_mask_primary"
+                            android:padding="@dimen/default_8dp"
+                            android:src="@drawable/ic_directions_car"
+                            android:tint="@color/android_pure_white" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="@string/label_by_car"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/theme_secondary" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/by_car_detail_msg"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:id="@+id/btnViewAccessMap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_8dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/by_car_access_map"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/theme_secondary"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_8dp"
+                        android:layout_marginTop="@dimen/default_16dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/label_where_to_park"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#414141"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/parking_info"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:id="@+id/btnParkingInformation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_8dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/more_information"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/theme_secondary"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <!--By Train-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/default_16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/default_8dp"
+                            android:background="@drawable/circle_mask_primary"
+                            android:padding="@dimen/default_8dp"
+                            android:src="@drawable/ic_directions_transit"
+                            android:tint="@color/android_pure_white" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="@string/label_by_train"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/theme_secondary" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/by_train_msg_1"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_8dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/by_train_msg_2"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:id="@+id/btnTrainSchedules"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_8dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/train_schedule"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/theme_secondary"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <!--By Plane-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/default_16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/default_8dp"
+                            android:background="@drawable/circle_mask_primary"
+                            android:padding="@dimen/default_8dp"
+                            android:src="@drawable/ic_flight_takeoff"
+                            android:tint="@color/android_pure_white" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="@string/label_by_plane"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/theme_secondary" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_8dp"
+                        android:layout_marginTop="@dimen/default_16dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/label_arrival_in_zaven"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#414141"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/by_plane_info"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_8dp"
+                        android:layout_marginTop="@dimen/default_16dp"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/label_arrival_in_south"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#414141"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/by_plane_info_south"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                </LinearLayout>
+                <!--By Bus-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/default_16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/default_8dp"
+                            android:background="@drawable/circle_mask_primary"
+                            android:padding="@dimen/default_8dp"
+                            android:src="@drawable/ic_directions_bus"
+                            android:tint="@color/android_pure_white" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="@string/label_by_bus"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/theme_secondary" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/by_bus_info"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:id="@+id/btnBusWebsite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_8dp"
+                        android:layout_marginTop="@dimen/default_8dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/label_tec_website"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/theme_secondary"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/by_bus_info_2"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/default_8dp"
+                    android:fontFamily="sans-serif"
+                    android:paddingLeft="@dimen/default_16dp"
+                    android:paddingRight="@dimen/default_16dp"
+                    android:paddingTop="@dimen/default_16dp"
+                    android:text="@string/label_where_to_sleep"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="#414141" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/default_16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:paddingLeft="@dimen/default_16dp"
+                    android:paddingRight="@dimen/default_16dp"
+                    android:text="@string/sleep_info"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:textColor="#414141" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#D8EBF8"
+                    android:fontFamily="sans-serif"
+                    android:padding="@dimen/default_16dp"
+                    android:text="@string/hotel_note"
+                    android:textColor="#77000000"
+                    android:textStyle="bold" />
+
+                <!--Hotels-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/default_16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_8dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/hotel_ibis"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/theme_secondary" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/hotel_ibis_address"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_8dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/hotel_ibis_desc"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#414141" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_16dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/label_booking"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnHotelOneCall"
+                            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="+3210483873"
+                            android:text="@string/label_call"
+                            android:textColor="@color/theme_secondary"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btnHotelOneEmail"
+                            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="H2200-SB1@accor.com"
+                            android:text="@string/label_email"
+                            android:textColor="@color/theme_secondary"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="@dimen/default_8dp"
+                    android:layout_marginTop="@dimen/default_8dp"
+                    android:background="#ccc" />
+                <!--Second hotel : Leonardo Hotel - Wavre-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/default_16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_8dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/hotel_leonardo"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/theme_secondary" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/hotel_leonardo_address"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_8dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/hotel_leonardo_desc"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#414141" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_16dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/label_booking"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnHotelTwoCall"
+                            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="+3210434757"
+                            android:text="@string/label_call_two"
+                            android:textColor="@color/theme_secondary"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btnHotelTwoEmail"
+                            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="groups.belgium@leonardo-hotels.com"
+                            android:text="@string/label_email"
+                            android:textColor="@color/theme_secondary"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="@dimen/default_8dp"
+                    android:layout_marginTop="@dimen/default_8dp"
+                    android:background="#ccc" />
+
+                <!--Third Hotel: Best Western - Wavre Hotel-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/default_16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_8dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/hotel_best_west"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/theme_secondary" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/hotel_best_west_address"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_8dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/hotel_best_west_desc"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#414141" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/default_16dp"
+                        android:fontFamily="sans-serif"
+                        android:text="@string/label_booking"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnHotelThreeCall"
+                            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="+3210887430"
+                            android:text="@string/label_call_3"
+                            android:textColor="@color/theme_secondary"
+                            android:textStyle="bold" />
+
+                        <Button
+                            android:id="@+id/btnHotelThreeEmail"
+                            style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="sales@bestwesternwavre.com"
+                            android:text="@string/label_email"
+                            android:textColor="@color/theme_secondary"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Sleeping done-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_16dp"
+                    android:gravity="top"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/aula_magna" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ebebeb"
+                        android:orientation="vertical"
+                        android:padding="@dimen/default_16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/default_8dp"
+                            android:fontFamily="sans-serif"
+                            android:text="@string/aula_magna"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textColor="#cc000000" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="@string/aula_magna_desc"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="#cc000000" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/louvain" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ebebeb"
+                        android:orientation="vertical"
+                        android:padding="@dimen/default_16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/default_8dp"
+                            android:fontFamily="sans-serif"
+                            android:text="@string/lauvain_name"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textColor="#cc000000" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif"
+                            android:text="@string/lauvain_desc"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="#cc000000" />
+
+                        <TextView
+                            android:id="@+id/btnAccessMap"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_8dp"
+                            android:fontFamily="sans-serif"
+                            android:text="@string/label_access_map"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/theme_secondary"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/contactUs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="sans-serif-light"
+                        android:padding="@dimen/default_48dp"
+                        android:tag="events@odoo.com"
+                        android:text="@string/for_more_info"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/android_pure_white" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#55000000"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/app_bar_top_padding">
+
+        <ImageView
+            android:id="@+id/closeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/default_8dp"
+            android:src="@drawable/ic_action_navigation_close"
+            android:tint="@color/android_pure_white" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/default_8dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/practical_information"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="#ffffff" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="@string/practical_information_address"
+                android:textAppearance="?android:textAppearanceSmall"
+                android:textColor="#99ffffff" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

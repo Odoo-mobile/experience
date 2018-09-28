@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+
+    <dimen name="default_4dp">4dp</dimen>
+    <dimen name="default_8dp">8dp</dimen>
+    <dimen name="default_16dp">16dp</dimen>
+    <dimen name="default_48dp">48dp</dimen>
+    <dimen name="app_bar_top_padding">0dp</dimen>
+
+    <!--app intro navigator -->
+    <dimen name="dot_normal_height_width">10dp</dimen>
+    <dimen name="dot_focused_height_width">16dp</dimen>
+    <dimen name="dot_top_bottom_margin">5dp</dimen>
+    <dimen name="dot_left_right_margin">2dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+</resources>

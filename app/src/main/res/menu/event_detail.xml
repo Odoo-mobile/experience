@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_launch_event_track_page"
+        android:icon="@drawable/ic_launch"
+        android:title="@string/label_launch_track_page"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_like_track"
+        android:icon="@drawable/ic_favorite_border"
+        android:title="@string/label_like_track"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_share_track"
+        android:icon="@drawable/ic_share"
+        android:title="@string/label_share_track"
+        app:showAsAction="always" />
+</menu>

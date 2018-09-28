@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="24dp"
+    android:orientation="horizontal">
+
+    <odoo.controls.BezelImageView
+        android:id="@+id/speakerAvatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatar"
+        app:maskDrawable="@drawable/circle_mask" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_8dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/speaker_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/font_normal"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/body_text_1"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/speaker_bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_4dp"
+            android:fontFamily="@string/font_light"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/body_text_1" />
+    </LinearLayout>
+</LinearLayout>

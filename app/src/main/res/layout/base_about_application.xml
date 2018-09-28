@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/base_appbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/default_16dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_8dp"
+            android:layout_marginTop="@dimen/default_16dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/font_normal"
+            android:text="@string/odoo_experience"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_16dp"
+            android:fontFamily="@string/font_light"
+            android:gravity="center"
+            android:paddingLeft="@dimen/default_16dp"
+            android:paddingRight="@dimen/default_16dp"
+            android:text="@string/odoo_experience_app_intro"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#414141" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/odoo_mobile_powered"
+        android:tint="#414141" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_16dp"
+        android:layout_marginRight="@dimen/default_16dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/writeToUs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="@dimen/default_8dp"
+            android:src="@drawable/ic_mail"
+            android:tint="#414141" />
+
+        <ImageView
+            android:id="@+id/launchWebsite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="@dimen/default_8dp"
+            android:src="@drawable/ic_public"
+            android:tint="#414141" />
+
+        <ImageView
+            android:id="@+id/playStore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="@dimen/default_8dp"
+            android:src="@drawable/ic_action_play_store"
+            android:tint="#414141" />
+
+        <ImageView
+            android:id="@+id/githubRepository"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="@dimen/default_8dp"
+            android:src="@drawable/ic_action_github"
+            android:tint="#414141" />
+
+        <ImageView
+            android:id="@+id/openTwitter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="@dimen/default_8dp"
+            android:src="@drawable/ic_twitter"
+            android:tint="#414141" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/applicationVersion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/default_4dp"
+        android:layout_marginTop="@dimen/default_8dp"
+        android:fontFamily="@string/font_light"
+        android:gravity="center"
+        android:textColor="@color/body_text_2"
+
+        android:textSize="@dimen/text_size_medium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/default_16dp"
+        android:paddingLeft="@dimen/default_16dp"
+        android:paddingRight="@dimen/default_16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/font_light"
+            android:text="@string/made_with"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_medium" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="@dimen/default_4dp"
+            android:layout_marginRight="@dimen/default_4dp"
+            android:src="@drawable/ic_favorite"
+            android:tint="#FF007F" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@string/font_light"
+            android:text="@string/in_india"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_medium" />
+
+    </LinearLayout>
+</LinearLayout>

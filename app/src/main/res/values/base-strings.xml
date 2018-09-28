@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_settings">Settings</string>
+    <string name="label_required">required</string>
+    <string name="label_alert">Alert</string>
+    <string name="label_warning">Warning</string>
+    <string name="label_error">Error</string>
+    <string name="label_reply">Reply</string>
+    <string name="label_close">Close</string>
+    <string name="label_send">Send</string>
+
+    <!-- package warning -->
+    <!-- Drawer -->
+    <!-- Common Labels -->
+    <string name="title_application_settings">"Application Settings"</string>
+    <string name="title_about">About</string>
+    <string name="title_working">Working&#8230;</string>
+    <string name="title_please_wait">Please wait&#8230;</string>
+    <string name="label_ok">OK</string>
+    <string name="label_search">Search</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="label_version">Version</string>
+    <string name="label_odoo_mobile_on_github">Odoo Mobile on GitHub</string>
+    <string name="label_odoo_developer_mode">Developer Mode</string>
+    <string name="label_export_db">Export Database</string>
+    <string name="label_our_apps">Our apps</string>
+    <string name="label_attach_a_file"> + Attach a file</string>
+    <!-- Toasts -->
+    <string name="developer_2_tap">Need 2 tap for developer mode</string>
+    <string name="developer_5_tap">Developer mode activated</string>
+    <string name="toast_network_required">Network required</string>
+    <string name="toast_no_activity_found_to_handle_file">No activity found to handle file</string>
+    <string name="toast_something_gone_wrong">Something gone wrong</string>
+    <!-- Setting pref strings -->
+    <string name="summary_about_odoo_mobile">Odoo Mobile</string>
+    <!-- About Company Fragment Strings -->
+    <string name="about_Company_line1">Copyright © 2004-TODAY Odoo SA. All Rights Reserved.</string>
+    <string name="about_Company_line2">Odoo is a trademark of the <a href="https://www.odoo.com/">Odoo.com.</a></string>
+    <string name="about_Company_line3">Licenced under the terms of <a href="http://www.gnu.org/licenses/agpl.html/">GNU Affero General Public License</a></string>
+    <string name="about_Company_line4">For more information visit <a href="https://www.odoo.com/">Odoo.com</a>.</string>
+    <string name="app_version_name">Version %s</string>
+    <string name="notification_default_ring_tone">content://settings/system/notification_sound</string>
+</resources>

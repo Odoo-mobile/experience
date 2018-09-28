@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="24dp"
+    android:paddingTop="@dimen/default_16dp">
+
+    <TextView
+        android:id="@+id/testimonialContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@string/font_light"
+        android:gravity="center"
+        android:textColor="#ebebeb"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/testimonialAuthor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@string/font_condensed"
+        android:gravity="center"
+        android:textColor="@color/android_pure_white"
+        android:textSize="@dimen/text_size_large"
+        android:textStyle="italic" />
+</LinearLayout>
