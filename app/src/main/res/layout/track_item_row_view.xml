@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:gravity="top"
+    android:orientation="horizontal"
+    android:paddingLeft="70dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/default_8dp"
+        android:paddingTop="@dimen/default_16dp">
+
+        <TextView
+            android:id="@+id/trackTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            tool:text="Opening Keynote" />
+
+        <TextView
+            android:id="@+id/trackDurationLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_4dp"
+            android:textColor="#aa000000"
+            android:textSize="14sp"
+            tool:text="45 minutes / Tower 4" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/trackTags"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:flexDirection="row"
+            app:flexWrap="wrap" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/trackStarred"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="45dp"
+        android:minWidth="45dp"
+        android:padding="@dimen/default_16dp"
+        android:src="@drawable/ic_action_starfill"
+        android:tint="#414141"
+        android:visibility="gone"
+        tool:visibility="visible" />
+</LinearLayout>

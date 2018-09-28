@@ -1,6 +1,6 @@
-Odoo Experience (2017)
+Odoo Experience (2018)
 ======================
 
-Download from Play Store: https://play.google.com/store/apps/details?id=com.odoo.experience
+Download from Play Store: https://play.google.com/store/apps/details?id=com.odoo.xp
 
-Works with Odoo 10.0
+Works with Odoo 11.0

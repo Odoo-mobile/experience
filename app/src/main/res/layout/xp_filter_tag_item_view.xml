@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/default_4dp"
+    android:animateLayoutChanges="true"
+    android:background="@drawable/xp_filter_item_view"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/default_4dp"
+    android:paddingLeft="@dimen/default_8dp"
+    android:paddingRight="@dimen/default_8dp"
+    android:paddingTop="@dimen/default_4dp">
+
+    <com.odoo.experience.widget.BezelImageView
+        android:id="@+id/filterDotColor"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:src="@drawable/circle_mask"
+        app:maskDrawable="@drawable/circle_mask" />
+
+    <TextView
+        android:id="@+id/filterName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/default_4dp"
+        android:layout_marginRight="@dimen/default_4dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/montserrat"
+        android:textColor="#000"
+        android:textSize="14sp"
+        tool:text="Sample Text" />
+
+    <com.odoo.experience.widget.BezelImageView
+        android:id="@+id/filterDeselect"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@drawable/circle_mask"
+        android:padding="2dp"
+        android:src="@drawable/ic_close_black_24dp"
+        android:tint="#fff"
+        android:visibility="gone"
+        tool:visibility="visible" />
+</LinearLayout>

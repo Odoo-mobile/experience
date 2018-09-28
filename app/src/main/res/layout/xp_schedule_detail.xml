@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@color/colorWhite"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/main.collapsing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorPrimaryDark"
+            app:layout_scrollFlags="scroll">
+
+            <ImageView
+                android:id="@+id/mainBackdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/detail_cover_1"
+                app:layout_collapseMode="parallax" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#99000000" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+            <TextView
+                android:id="@+id/trackTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|left"
+                android:fontFamily="@font/open_sans_light"
+                android:gravity="bottom"
+                android:lines="4"
+                android:paddingBottom="@dimen/default_16dp"
+                android:paddingLeft="@dimen/default_16dp"
+                android:paddingRight="60dp"
+                android:paddingTop="@dimen/default_16dp"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        app:layout_behavior="@string/scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/viewContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="60dp"
+            android:paddingLeft="@dimen/default_16dp"
+            android:paddingRight="@dimen/default_16dp"
+            android:paddingTop="@dimen/default_16dp">
+
+            <!-- Date and Location -->
+            <TextView
+                android:id="@+id/trackDateAndTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_4dp"
+                android:layout_marginTop="@dimen/default_8dp"
+                android:fontFamily="@font/open_sans"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/trackLocationContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/default_24dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:padding="2dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_location_on24dp" />
+
+                <TextView
+                    android:id="@+id/trackLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    tool:text="Infocity Tower 1" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/trackDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/open_sans"
+                android:layout_marginBottom="@dimen/default_8dp"
+                android:textColor="#CC000000"
+                android:textSize="15sp" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:id="@+id/trackTags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/default_16dp"
+                app:flexDirection="row"
+                app:flexWrap="wrap" />
+
+            <LinearLayout
+                android:id="@+id/speakerContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tool:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/default_8dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/label_speaker"
+                    android:textAllCaps="true"
+                    android:textColor="#cc414141"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|top"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/default_8dp">
+
+                    <com.odoo.experience.widget.BezelImageView
+                        android:id="@+id/partnerImage"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user"
+                        app:maskDrawable="@drawable/circle_mask" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/default_8dp">
+
+                        <TextView
+                            android:id="@+id/partnerName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            tool:text="Fabien Pinckaers" />
+
+                        <TextView
+                            android:id="@+id/partnerDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:textColor="#414141"
+                            android:textSize="12sp"
+                            tool:text="At just 13 years old, Fabien was already starting to develop his first business applications for customers such as AEB, Flagey and Transports Verts." />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnStarTrack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="@dimen/default_16dp"
+        android:layout_marginRight="@dimen/default_16dp"
+        android:src="@drawable/ic_action_star"
+        android:tint="@color/colorWhite"
+        app:backgroundTint="@color/colorAccent"
+        app:fabSize="normal" />
+</android.support.design.widget.CoordinatorLayout>

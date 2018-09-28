@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/default_4dp"
+    android:layout_marginRight="@dimen/default_4dp"
+    android:paddingRight="@dimen/default_4dp"
+    android:paddingTop="@dimen/default_4dp">
+
+    <ImageView
+        android:id="@+id/trackTagColors"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginRight="@dimen/default_4dp"
+        android:src="@drawable/circle_mask_primary" />
+
+    <TextView
+        android:id="@+id/trackTagName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:singleLine="true"
+        android:textColor="#cc000000"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        tool:text="Sessions: Success Story" />
+</LinearLayout>

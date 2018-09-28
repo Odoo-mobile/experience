@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_schedule"
+        android:icon="@drawable/ic_event_24dp"
+        android:title="@string/label_schedule" />
+    <!--<item-->
+    <!--android:id="@+id/menu_map"-->
+    <!--android:icon="@drawable/ic_location_on24dp"-->
+    <!--android:title="@string/label_map" />-->
+    <item
+        android:id="@+id/menu_sponsors"
+        android:icon="@drawable/ic_action_handshake"
+        android:title="@string/label_sponsors" />
+    <item
+        android:id="@+id/menu_info"
+        android:icon="@drawable/ic_info_24dp"
+        android:title="@string/label_info" />
+</menu>

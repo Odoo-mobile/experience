@@ -1,1 +1,1 @@
-include ':app', ':odoo-rpc-v3'
+include ':app'
