@@ -9,8 +9,8 @@ Some screenshots
 ----------------
 
 ![splash](https://user-images.githubusercontent.com/12744972/66641583-a742b000-ec38-11e9-8a10-ceb579b24577.png)
-![home](https://user-images.githubusercontent.com/7599886/46207037-8bc57980-c343-11e8-879f-11ebe2a198d2.png)
-![starred](https://user-images.githubusercontent.com/7599886/46207167-04c4d100-c344-11e8-9fe0-f5b13bc0ce1d.png)
-![filters](https://user-images.githubusercontent.com/7599886/46207162-0393a400-c344-11e8-8f86-87b42aa2299d.png)
-![sponsors](https://user-images.githubusercontent.com/7599886/46207165-04c4d100-c344-11e8-91b5-de9383411a4b.png)
-![info](https://user-images.githubusercontent.com/7599886/46207164-04c4d100-c344-11e8-8bca-bf5289a879a8.png)
+![home](https://user-images.githubusercontent.com/12744972/66641766-ff79b200-ec38-11e9-8725-c4f123f6b586.png)
+![starred](https://user-images.githubusercontent.com/12744972/66641775-056f9300-ec39-11e9-8e25-9b1f9d6d9967.png)
+![filters](https://user-images.githubusercontent.com/12744972/66641792-0c96a100-ec39-11e9-890d-e4d9fcd50281.png)
+![sponsors](https://user-images.githubusercontent.com/12744972/66641781-07395680-ec39-11e9-9878-ce15fd6f0288.png)
+![info](https://user-images.githubusercontent.com/12744972/66641799-0e606480-ec39-11e9-9dbb-b404478c8572.png)
