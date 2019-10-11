@@ -1,4 +1,4 @@
-Odoo Experience (2018)
+Odoo Experience (2019)
 ======================
 
 Download from Play Store: https://play.google.com/store/apps/details?id=com.odoo.xp
