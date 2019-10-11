@@ -48,9 +48,9 @@ public class EventSponsors extends OModel {
         values.put("sponsor_type_id", Double.valueOf(sponsor_type_id.get(0).toString()).intValue());
         values.put("sponsor_type_name", sponsor_type_id.get(1).toString());
 
-        List<Object> event_id = record.getArray("event_id");
-        values.put("event_id", Double.valueOf(event_id.get(0).toString()).intValue());
-        values.put("event_name", event_id.get(1).toString());
+//        List<Object> event_id = record.getArray("event_id");
+//        values.put("event_id", Double.valueOf(event_id.get(0).toString()).intValue());
+//        values.put("event_name", event_id.get(1).toString());
 
         values.put("image_medium", record.getString("image_medium"));
         return values;

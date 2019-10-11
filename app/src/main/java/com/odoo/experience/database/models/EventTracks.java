@@ -2,7 +2,6 @@ package com.odoo.experience.database.models;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.util.Log;
 
 import com.odoo.experience.core.api.odoo.client.helper.data.OdooRecord;
 import com.odoo.experience.core.db.OModel;
@@ -64,6 +63,12 @@ public class EventTracks extends OModel {
         if (!record.getString("partner_id").equals("false")) {
             List<Object> partner_id = record.getArray("partner_id");
             values.put("partner_id", Double.valueOf(partner_id.get(0).toString()).intValue());
+            ResPartner partner = new ResPartner(getContext());
+            ContentValues partnerDetail = new ContentValues();
+            partnerDetail.put("id", values.getAsInteger("partner_id"));
+            partnerDetail.put("name", record.getString("partner_name"));
+            partnerDetail.put("website_description", record.getString("partner_website_description"));
+            partner.createOrUpdate(partnerDetail, values.getAsInteger("partner_id"));
         }
 
         values.put("partner_name", record.getString("partner_name"));
@@ -78,6 +83,7 @@ public class EventTracks extends OModel {
         values.put("date", record.getString("date"));
         values.put("description", record.getString("description"));
         values.put("image", record.getString("image"));
+
         if (!record.getString("stage_id").equals("false")) {
             List<Object> stage_id = record.getArray("stage_id");
             values.put("stage_id", Double.valueOf(stage_id.get(0).toString()).intValue());

@@ -9,7 +9,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
 import android.os.Environment;
 import android.os.StrictMode;
-import android.support.annotation.CallSuper;
+import androidx.annotation.CallSuper;
 import android.util.Log;
 
 import com.odoo.experience.AppConfig;
@@ -251,6 +251,7 @@ public abstract class OModel extends SQLiteOpenHelper {
     }
 
     public void exportDB() {
+
 
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());

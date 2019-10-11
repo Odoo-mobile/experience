@@ -5,14 +5,10 @@
     <dimen name="default_48dp">48dp</dimen>
     <dimen name="default_4dp">4dp</dimen>
     <dimen name="default_24dp">24dp</dimen>
-    <dimen name="section_header_height">60dp</dimen>
     <dimen name="dimen_50">50dp</dimen>
-    <dimen name="dimen_40">40sp</dimen>
-    <dimen name="dimen_30">30sp</dimen>
-    <dimen name="dimen_35">35sp</dimen>
-    <dimen name="dimen_43">43sp</dimen>
     <dimen name="font_x">14sp</dimen>
     <dimen name="font_xx">16sp</dimen>
     <dimen name="sticky_header_width">60dp</dimen>
     <dimen name="sticky_header_top_padding">20dp</dimen>
+    <dimen name="default_2dp">2dp</dimen>
 </resources>

@@ -4,23 +4,20 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.support.v4.app.Fragment;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.res.ResourcesCompat;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.core.content.ContextCompat;
+import androidx.core.content.res.ResourcesCompat;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.text.Layout;
 import android.text.SpannableStringBuilder;
 import android.text.StaticLayout;
 import android.text.style.AbsoluteSizeSpan;
 import android.text.style.StyleSpan;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.Toast;
 import android.widget.ViewSwitcher;
@@ -35,7 +32,6 @@ import com.odoo.experience.database.models.EventTrackTagsRel;
 import com.odoo.experience.database.models.EventTracks;
 import com.odoo.experience.widget.recycler.RVHolder;
 import com.odoo.experience.widget.recycler.RecyclerAdapter;
-import com.odoo.experience.widget.recycler.RecyclerSectionItemDecoration;
 import com.odoo.experience.widget.recycler.TimeHeaderDecoration;
 
 import java.util.ArrayList;
@@ -92,7 +88,7 @@ public class FragStarred extends OdooFragment implements RecyclerAdapter.OnItemV
 
     private void loadData() {
         List<ORecord> records = getRecords();
-        if (recyclerView.getItemDecorationAt(0) != null) {
+        if (recyclerView.getItemDecorationCount() > 0 && recyclerView.getItemDecorationAt(0) != null) {
             recyclerView.removeItemDecoration(recyclerView.getItemDecorationAt(0));
         }
         adapter = new RecyclerAdapter(getContext(), records);

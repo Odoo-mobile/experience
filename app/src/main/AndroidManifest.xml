@@ -21,6 +21,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
+        <activity android:name=".EventIntroductionActivity" />
         <activity android:name=".ui.schedule.ScheduleDetail" />
         <activity android:name=".ui.schedule.FilterSheetDialog" />
 

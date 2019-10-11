@@ -5,12 +5,16 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.NavUtils;
-import android.support.v4.app.TaskStackBuilder;
-import android.support.v7.app.ActionBar;
-import android.support.v7.widget.Toolbar;
+
+import androidx.annotation.Nullable;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import androidx.core.app.NavUtils;
+import androidx.core.app.TaskStackBuilder;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -120,8 +124,12 @@ public class ScheduleDetail extends OdooActivity implements View.OnClickListener
         } else {
             findViewById(R.id.trackLocationContainer).setVisibility(View.GONE);
         }
-        OBind.setText(findViewById(R.id.trackDescription),
-                StringUtils.stringToHtml(record.getString("description")));
+        if (!record.getString("description").equals("false")) {
+            OBind.setText(findViewById(R.id.trackDescription),
+                    StringUtils.stringToHtml(record.getString("description")));
+        } else {
+            findViewById(R.id.trackDescription).setVisibility(View.GONE);
+        }
         bindTags(tags.getRelRecords(record.getInt("id")), (ViewGroup) findViewById(R.id.trackTags));
 
         if (!record.getString("partner_name").equals("false")) {

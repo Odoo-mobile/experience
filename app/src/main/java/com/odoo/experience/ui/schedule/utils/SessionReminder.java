@@ -5,8 +5,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.AlarmManagerCompat;
-import android.util.Log;
+import androidx.core.app.AlarmManagerCompat;
 
 import com.odoo.experience.core.utils.ODateUtils;
 
@@ -40,10 +39,16 @@ public class SessionReminder {
         Calendar calendar = Calendar.getInstance();
         calendar.setTime(date);
         calendar.add(Calendar.MINUTE, -10);
+        Date current = Calendar.getInstance().getTime();
+        Date event = calendar.getTime();
         if (toCancel) {
             alarmManager.cancel(intent);
         } else {
-            AlarmManagerCompat.setExact(alarmManager, AlarmManager.RTC_WAKEUP, calendar.getTime().getTime(), intent);
+            if (current.after(event)) {
+                alarmManager.cancel(intent);
+            } else {
+                AlarmManagerCompat.setExact(alarmManager, AlarmManager.RTC_WAKEUP, calendar.getTime().getTime(), intent);
+            }
         }
     }
 }

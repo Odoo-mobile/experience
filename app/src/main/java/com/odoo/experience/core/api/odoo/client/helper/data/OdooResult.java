@@ -23,10 +23,14 @@ public class OdooResult extends TreeMap<String, Object> {
     }
 
     public int getInt(String key) {
+        return getInt(key, -1);
+    }
+
+    public int getInt(String key, int defValue) {
         if (isValidValue(key)) {
             return getFloat(key).intValue();
         }
-        return -1;
+        return defValue;
     }
 
     public Float getFloat(String key) {
@@ -36,9 +40,9 @@ public class OdooResult extends TreeMap<String, Object> {
         return 0F;
     }
 
-    public OdooResult getData(String key) {
+    public OdooRecord getData(String key) {
         if (isValidValue(key)) {
-            OdooResult data = new OdooResult();
+            OdooRecord data = new OdooRecord();
             data.putAll((LinkedTreeMap) get(key));
             return data;
         }
@@ -53,10 +57,10 @@ public class OdooResult extends TreeMap<String, Object> {
         return new ArrayList<>();
     }
 
-    public OdooRecord[] getRecords() {
+    public OdooRecord[] getRecords(String key) {
         Object data = null;
-        if (isValidValue("records")) {
-            data = get("records");
+        if (isValidValue(key)) {
+            data = get(key);
         }
         if (isValidValue("result") && get("result") instanceof ArrayList) {
             data = get("result");
@@ -67,6 +71,10 @@ public class OdooResult extends TreeMap<String, Object> {
             return gson.fromJson(recordsJSON, OdooRecord[].class);
         }
         return new OdooRecord[]{};
+    }
+
+    public OdooRecord[] getRecords() {
+        return getRecords("records");
     }
 
     protected boolean isValidValue(String key) {

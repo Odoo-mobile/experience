@@ -6,7 +6,7 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -208,7 +208,7 @@ public class FilterSheetDialog extends OdooActivity implements View.OnClickListe
         if (!tagIds.isEmpty()) {
             List<Integer> trackIds = tagsRel.getTrackIds(tagIds);
             if (!trackIds.isEmpty()) {
-                where += whereStrLocation.isEmpty() ? "" : " AND ";
+                where += whereStrLocation.isEmpty() ? "location_id != 'NULL' AND " : " AND ";
                 where += "id IN (" + TextUtils.join(", ", trackIds) + ")";
             } else {
                 findViewById(R.id.bntResetFilters).setVisibility(!selectedItems.isEmpty() ? View.GONE : View.VISIBLE);

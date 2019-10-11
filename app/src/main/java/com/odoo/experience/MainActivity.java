@@ -2,11 +2,11 @@ package com.odoo.experience;
 
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.BottomNavigationView;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import androidx.fragment.app.FragmentManager;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
 
@@ -34,6 +34,7 @@ public class MainActivity extends OdooActivity implements BottomNavigationView.O
         navigationView.setOnNavigationItemSelectedListener(this);
 
         if (Build.VERSION.SDK_INT >= 21) {
+//            getWindow().setStatusBarColor(ContextCompat.getColor(this,R.color.colorWhite)); //status bar or the time bar at the top
             getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.colorPrimaryDark)); // Navigation bar the soft bottom of some phones like nexus and some Samsung note series
         }
     }
@@ -76,6 +77,10 @@ public class MainActivity extends OdooActivity implements BottomNavigationView.O
                 setTitle(getString(R.string.label_schedule));
                 fragment = new FragmentXPSchedule();
                 break;
+//            case R.id.menu_map:
+//                setTitle(getString(R.string.label_map));
+//                fragment = new FragmentXPMap();
+//                break;
             case R.id.menu_sponsors:
                 setTitle(getString(R.string.label_sponsors));
                 fragment = new FragmentXPSponsors();

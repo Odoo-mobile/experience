@@ -3,12 +3,14 @@ package com.odoo.experience.core.api.odoo;
 import android.content.Context;
 
 import com.android.volley.DefaultRetryPolicy;
+
+import java.util.List;
+
+import com.odoo.experience.core.api.odoo.client.builder.RequestBuilder;
 import com.odoo.experience.core.api.odoo.client.ConnectorClient;
 import com.odoo.experience.core.api.odoo.client.OdooVersion;
 import com.odoo.experience.core.api.odoo.client.listeners.OdooConnectListener;
 import com.odoo.experience.core.api.odoo.client.listeners.OdooErrorListener;
-
-import java.util.List;
 
 public class OdooClient extends ConnectorClient<OdooClient> {
 
@@ -103,5 +105,13 @@ public class OdooClient extends ConnectorClient<OdooClient> {
             client.connect();
             return client;
         }
+    }
+
+    //-----------------------------------------------
+    // Request Builder API
+    //-----------------------------------------------
+
+    public RequestBuilder newRequest(String forModel) {
+        return RequestBuilder.init(this, forModel);
     }
 }

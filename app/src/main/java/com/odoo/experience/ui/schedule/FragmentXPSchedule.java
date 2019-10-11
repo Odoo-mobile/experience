@@ -3,21 +3,18 @@ package com.odoo.experience.ui.schedule;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
+import com.google.android.material.tabs.TabLayout;
+import androidx.viewpager.widget.ViewPager;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.odoo.experience.AppConfig;
@@ -30,7 +27,6 @@ import com.odoo.experience.database.models.EventTrackTags;
 import com.odoo.experience.database.models.EventTracks;
 import com.odoo.experience.ui.TabFragmentAdapter;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 

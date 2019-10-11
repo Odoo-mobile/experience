@@ -3,15 +3,14 @@ package com.odoo.experience.widget.recycler;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Rect;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.odoo.experience.R;
 import com.odoo.experience.core.db.ORecord;
 
 

@@ -26,7 +26,7 @@ public class EventTrackTags extends OModel {
     public ContentValues recordToValues(OdooRecord record) {
         ContentValues contentValues = super.recordToValues(record);
         contentValues.put("name", record.getString("name"));
-        contentValues.put("color", record.getInt("color"));
+        contentValues.put("color", record.getInt("color", 0));
         return contentValues;
     }
 }

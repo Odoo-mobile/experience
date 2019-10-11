@@ -29,10 +29,11 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
-import android.support.v4.view.ViewCompat;
-import android.support.v7.widget.AppCompatImageView;
+
+import androidx.core.view.ViewCompat;
+import androidx.appcompat.widget.AppCompatImageView;
+
 import android.util.AttributeSet;
-import android.widget.ImageView;
 
 import com.odoo.experience.R;
 
@@ -179,9 +180,7 @@ public class BezelImageView extends AppCompatImageView {
                 mMaskedPaint
                         .setColorFilter((mDesaturateOnPress && isPressed()) ? mDesaturateColorFilter
                                 : null);
-                cacheCanvas.saveLayer(mBoundsF, mMaskedPaint,
-                        Canvas.HAS_ALPHA_LAYER_SAVE_FLAG
-                                | Canvas.FULL_COLOR_LAYER_SAVE_FLAG);
+                cacheCanvas.saveLayer(mBoundsF, mMaskedPaint, Canvas.ALL_SAVE_FLAG);
                 super.onDraw(cacheCanvas);
                 cacheCanvas.restoreToCount(sc);
             } else if (mDesaturateOnPress && isPressed()) {
@@ -189,9 +188,7 @@ public class BezelImageView extends AppCompatImageView {
                 cacheCanvas.drawRect(0, 0, mCachedWidth, mCachedHeight,
                         mBlackPaint);
                 mMaskedPaint.setColorFilter(mDesaturateColorFilter);
-                cacheCanvas.saveLayer(mBoundsF, mMaskedPaint,
-                        Canvas.HAS_ALPHA_LAYER_SAVE_FLAG
-                                | Canvas.FULL_COLOR_LAYER_SAVE_FLAG);
+                cacheCanvas.saveLayer(mBoundsF, mMaskedPaint, Canvas.ALL_SAVE_FLAG);
                 super.onDraw(cacheCanvas);
                 cacheCanvas.restoreToCount(sc);
             } else {

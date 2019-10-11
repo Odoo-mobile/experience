@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tool="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,781 +13,1308 @@
         android:orientation="vertical"
         android:paddingBottom="50dp">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/banner_practical_info"
-            android:visibility="gone" />
-
+        <!--Content Layout-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="@dimen/default_8dp"
-                android:fontFamily="@font/montserrat"
-                android:paddingLeft="@dimen/default_16dp"
-                android:paddingRight="@dimen/default_16dp"
-                android:paddingTop="@dimen/default_16dp"
-                android:text="@string/label_how_to_get_there"
-                android:textAppearance="?android:textAppearanceLarge"
-                android:textColor="#414141" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:fontFamily="@font/roboto_light"
-                android:paddingLeft="@dimen/default_16dp"
-                android:paddingRight="@dimen/default_16dp"
-                android:text="@string/get_there_address"
-                android:textAppearance="?android:textAppearanceSmall"
-                android:textColor="#414141" />
-
-            <!--By Car-->
-
+            <!--Wifi-->
             <LinearLayout
+                android:id="@+id/viewWifi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/default_16dp"
-                tool:visibility="visible">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/default_8dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="@dimen/default_8dp"
-                        android:background="@drawable/circle_mask_primary"
-                        android:padding="@dimen/default_8dp"
-                        android:src="@drawable/ic_directions_car_black_24dp"
-                        android:tint="@color/colorWhite" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/ubuntu_medium"
-                        android:text="@string/label_by_car"
-                        android:textAppearance="?android:textAppearanceMedium"
-                        android:textColor="@color/colorPrimary" />
-                </LinearLayout>
+                android:background="#88d3d3d3"
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="2"
                     android:fontFamily="@font/montserrat"
-                    android:text="@string/by_car_detail_msg"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#cc000000" />
-
-                <TextView
-                    android:id="@+id/btnViewAccessMap"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/default_8dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/by_car_access_map"
+                    android:paddingBottom="@dimen/default_16dp"
+                    android:paddingLeft="@dimen/default_8dp"
+                    android:paddingRight="@dimen/default_8dp"
+                    android:paddingTop="@dimen/default_16dp"
+                    android:text="@string/label_wifi"
                     android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="13sp"
-                    android:textStyle="bold" />
-
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/default_8dp"
-                    android:layout_marginTop="@dimen/default_16dp"
-                    android:fontFamily="@font/ubuntu_medium"
-                    android:text="@string/label_where_to_park"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#414141"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/parking_info"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#cc000000" />
-
-                <TextView
-                    android:id="@+id/btnParkingInformation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/default_8dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/more_information"
-                    android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="13sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-            <!--By Train-->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/default_16dp"
-                tool:visibility="gone">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/default_8dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="@dimen/default_8dp"
-                        android:background="@drawable/circle_mask_primary"
-                        android:padding="@dimen/default_8dp"
-                        android:src="@drawable/ic_directions_transit_black_24dp"
-                        android:tint="@color/colorWhite" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/ubuntu_medium"
-                        android:text="@string/label_by_train"
-                        android:textAppearance="?android:textAppearanceMedium"
-                        android:textColor="@color/colorPrimary" />
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/by_train_msg_1"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#cc000000" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/default_8dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/by_train_msg_2"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#cc000000" />
-
-                <TextView
-                    android:id="@+id/btnTrainSchedules"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/default_8dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/train_schedule"
-                    android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="13sp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-            <!--By Plane-->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/default_16dp"
-                tool:visibility="gone">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/default_8dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="@dimen/default_8dp"
-                        android:background="@drawable/circle_mask_primary"
-                        android:padding="@dimen/default_8dp"
-                        android:src="@drawable/ic_flight_takeoff_black_24dp"
-                        android:tint="@color/colorWhite" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/ubuntu_medium"
-                        android:text="@string/label_by_plane"
-                        android:textAppearance="?android:textAppearanceMedium"
-                        android:textColor="@color/colorPrimary" />
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/default_8dp"
-                    android:layout_marginTop="@dimen/default_16dp"
-                    android:fontFamily="@font/ubuntu_medium"
-                    android:text="@string/label_arrival_in_zaven"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#414141"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/by_plane_info"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#cc000000" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/default_8dp"
-                    android:layout_marginTop="@dimen/default_16dp"
-                    android:fontFamily="@font/ubuntu_medium"
-                    android:text="@string/label_arrival_in_south"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#414141"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/by_plane_info_south"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#cc000000" />
-
-            </LinearLayout>
-            <!--By Bus-->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/default_16dp"
-                tool:visibility="gone">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/default_8dp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="@dimen/default_8dp"
-                        android:background="@drawable/circle_mask_primary"
-                        android:padding="@dimen/default_8dp"
-                        android:src="@drawable/ic_directions_bus_black_24dp"
-                        android:tint="@color/colorWhite" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:fontFamily="@font/ubuntu_medium"
-                        android:text="@string/label_by_bus"
-                        android:textAppearance="?android:textAppearanceMedium"
-                        android:textColor="@color/colorPrimary" />
-                </LinearLayout>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/by_bus_info"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#cc000000" />
-
-                <TextView
-                    android:id="@+id/btnBusWebsite"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/default_8dp"
-                    android:layout_marginTop="@dimen/default_8dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/label_tec_website"
-                    android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="13sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/by_bus_info_2"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#cc000000" />
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="@dimen/default_8dp"
-                android:fontFamily="@font/montserrat"
-                android:paddingLeft="@dimen/default_16dp"
-                android:paddingRight="@dimen/default_16dp"
-                android:paddingTop="@dimen/default_16dp"
-                android:text="@string/label_where_to_sleep"
-                android:textAppearance="?android:textAppearanceLarge"
-                android:textColor="#414141" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:layout_marginBottom="@dimen/default_16dp"
-                android:fontFamily="@font/roboto_light"
-                android:paddingLeft="@dimen/default_16dp"
-                android:paddingRight="@dimen/default_16dp"
-                android:text="@string/sleep_info"
-                android:textAppearance="?android:textAppearanceSmall"
-                android:textColor="#414141" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#D8EBF8"
-                android:fontFamily="@font/montserrat"
-                android:padding="@dimen/default_16dp"
-                android:text="@string/hotel_note"
-                android:textColor="#77000000"
-                android:textStyle="bold" />
-
-            <!--Hotels-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/default_16dp"
-                tool:visibility="gone">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/default_8dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/hotel_martin_agora"
-                    android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@color/colorPrimary" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/hotel_martin_agora_location"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#cc000000" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/default_8dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/hotel_martin_agora_desc"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#414141" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/default_16dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/label_booking"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#cc000000"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/label_use_discount_code_to_book"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#88000000" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <android.support.v7.widget.AppCompatButton
-                        android:id="@+id/btnHotelZeroBook"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/label_open_website"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="13sp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginBottom="@dimen/default_8dp"
-                android:layout_marginTop="@dimen/default_8dp"
-                android:background="#ccc" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/default_16dp"
-                tool:visibility="gone">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/default_8dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/hotel_ibis"
-                    android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@color/colorPrimary" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/hotel_ibis_address"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#cc000000" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/default_8dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/hotel_ibis_desc"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#414141" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/default_16dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/label_booking"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#cc000000"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <android.support.v7.widget.AppCompatButton
-                        android:id="@+id/btnHotelOneCall"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="8dp"
-                        android:layout_weight="1"
-                        android:tag="+3210483873"
-                        android:text="@string/label_call"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="13sp" />
-
-                    <android.support.v7.widget.AppCompatButton
-                        android:id="@+id/btnHotelOneEmail"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:tag="H2200-SB2@accor.com"
-                        android:text="@string/label_email"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="13sp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginBottom="@dimen/default_8dp"
-                android:layout_marginTop="@dimen/default_8dp"
-                android:background="#ccc" />
-            <!--Second hotel : Leonardo Hotel - Wavre-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/default_16dp"
-                tool:visibility="gone">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/default_8dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/hotel_wavre_brussels"
-                    android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@color/colorPrimary" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/hotel_leonardo_address"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#cc000000" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/default_8dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/hotel_leonardo_desc"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#414141" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/default_16dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/label_booking"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#cc000000"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <android.support.v7.widget.AppCompatButton
-                        android:id="@+id/btnHotelTwoCall"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="8dp"
-                        android:layout_weight="1"
-                        android:tag="+3210434757"
-                        android:text="@string/label_call_two"
-                        android:textColor="@color/colorAccent"
-                        android:visibility="gone" />
-
-                    <android.support.v7.widget.AppCompatButton
-                        android:id="@+id/btnHotelTwoEmail"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:tag="HB2N6-SB@accor.com"
-                        android:text="@string/label_email"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="13sp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginBottom="@dimen/default_8dp"
-                android:layout_marginTop="@dimen/default_8dp"
-                android:background="#ccc" />
-
-            <!--Third Hotel: Best Western - Wavre Hotel-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="@dimen/default_16dp"
-                tool:visibility="gone">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/default_8dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/hotel_best_west"
-                    android:textAppearance="?android:textAppearanceMedium"
-                    android:textColor="@color/colorPrimary" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/hotel_best_west_address"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#cc000000" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/default_8dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/hotel_best_west_desc"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#414141" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/default_16dp"
-                    android:fontFamily="@font/montserrat"
-                    android:text="@string/label_booking"
-                    android:textAppearance="?android:textAppearanceSmall"
-                    android:textColor="#cc000000"
-                    android:textStyle="bold" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <android.support.v7.widget.AppCompatButton
-                        android:id="@+id/btnHotelThreeCall"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="8dp"
-                        android:layout_weight="1"
-                        android:tag="+3210887430"
-                        android:text="@string/label_call_3"
-                        android:textColor="@color/colorAccent"
-                        android:visibility="gone" />
-
-                    <android.support.v7.widget.AppCompatButton
-                        android:id="@+id/btnHotelThreeEmail"
-                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:tag="info@bestwesternwavre.com"
-                        android:text="@string/label_email"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="13sp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!--Sleeping done-->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/default_16dp"
-                android:gravity="top"
-                android:orientation="vertical">
+                    android:textColor="#000000" />
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/aula_magna" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
+                    android:id="@+id/imageExpandWifi"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#ebebeb"
-                    android:orientation="vertical"
-                    android:padding="@dimen/default_16dp">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/default_8dp"
-                        android:fontFamily="@font/montserrat"
-                        android:text="@string/aula_magna"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        android:textColor="#cc000000" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat"
-                        android:text="@string/aula_magna_desc"
-                        android:textAppearance="?android:textAppearanceSmall"
-                        android:textColor="#cc000000" />
-                </LinearLayout>
-
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/default_24dp"
+                    android:padding="@dimen/default_4dp"
+                    android:tint="#000000"
+                    android:src="@drawable/ic_arrow_right_black_24dp" />
             </LinearLayout>
 
+            <!--Wifi Detail-->
             <LinearLayout
+                android:id="@+id/viewWifiDetail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="top"
+                android:layout_marginBottom="@dimen/default_4dp"
+                android:visibility="gone"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/louvain" />
-
+                <!--Odoo Network-->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#ebebeb"
-                    android:orientation="vertical"
-                    android:padding="@dimen/default_16dp">
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/default_8dp"
+                    android:padding="@dimen/default_8dp">
 
                     <TextView
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="@dimen/default_8dp"
-                        android:fontFamily="@font/montserrat"
-                        android:text="@string/lauvain_name"
-                        android:textAppearance="?android:textAppearanceLarge"
-                        android:textColor="#cc000000" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat"
-                        android:text="@string/lauvain_desc"
-                        android:textAppearance="?android:textAppearanceSmall"
-                        android:textColor="#cc000000" />
-
-                    <TextView
-                        android:id="@+id/btnAccessMap"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/default_8dp"
-                        android:fontFamily="@font/montserrat"
-                        android:text="@string/label_access_map"
+                        android:layout_marginLeft="@dimen/default_4dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_light"
+                        android:textColor="#cc000000"
+                        android:text="@string/label_wifi_network"
                         android:textAppearance="?android:textAppearanceMedium"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="13sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/default_4dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_light"
+                        android:textColor="#cc000000"
+                        android:text="@string/label_odoo"
+                        android:textAppearance="?android:textAppearanceMedium"
                         android:textStyle="bold" />
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/contactUs"
+                <!--Odoo Password-->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@color/colorPrimary"
-                    android:fontFamily="@font/lato_light"
-                    android:padding="@dimen/default_48dp"
-                    android:tag="events@odoo.com"
-                    android:text="@string/for_more_info"
-                    android:textAppearance="?android:textAppearanceLarge"
-                    android:textColor="@color/colorWhite" />
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/default_8dp"
+                    android:padding="@dimen/default_8dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/default_4dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_light"
+                        android:textColor="#cc000000"
+                        android:text="@string/label_wifi_password"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/default_4dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/lato_light"
+                        android:textColor="#cc000000    "
+                        android:text="@string/label_odoo_password"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textStyle="bold" />
+                </LinearLayout>
             </LinearLayout>
+
+            <!--How to get There-->
+            <LinearLayout
+                android:id="@+id/viewGetThere"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_2dp"
+                android:background="#88d3d3d3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/montserrat"
+                    android:paddingBottom="@dimen/default_16dp"
+                    android:paddingLeft="@dimen/default_8dp"
+                    android:paddingRight="@dimen/default_8dp"
+                    android:paddingTop="@dimen/default_16dp"
+                    android:text="@string/label_how_to_get_there"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/imageExpandGetThere"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:tint="#000000"
+                    android:layout_marginRight="@dimen/default_24dp"
+                    android:padding="@dimen/default_4dp"
+                    android:src="@drawable/ic_arrow_right_black_24dp" />
+            </LinearLayout>
+
+            <!--How to get There detail..
+                by car, train, plane, bus
+                place detail-->
+            <LinearLayout
+                android:id="@+id/viewGetThereContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/default_4dp"
+                    android:orientation="vertical">
+                    <!--Place-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/default_16dp"
+                        tool:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/default_8dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/default_8dp"
+                                android:background="@drawable/circle_mask_primary"
+                                android:padding="@dimen/default_8dp"
+                                android:src="@drawable/ic_directions_car_black_24dp"
+                                android:tint="@color/colorWhite" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="@string/label_by_car"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="@color/colorPrimary" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:justificationMode="inter_word"
+                            android:text="@string/by_car_detail_msg"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="#cc000000" />
+
+                        <TextView
+                            android:id="@+id/btnViewAccessMap"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_8dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/by_car_access_map"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/default_8dp"
+                            android:layout_marginTop="@dimen/default_16dp"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:text="@string/label_where_to_park"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="#414141"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:justificationMode="inter_word"
+                            android:text="@string/parking_info"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="#cc000000" />
+
+                        <TextView
+                            android:id="@+id/btnParkingInformation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_8dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/more_information"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!--By Car-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/default_16dp"
+                        tool:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/default_8dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/default_8dp"
+                                android:background="@drawable/circle_mask_primary"
+                                android:padding="@dimen/default_8dp"
+                                android:src="@drawable/ic_directions_transit_black_24dp"
+                                android:tint="@color/colorWhite" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="@string/label_by_train"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="@color/colorPrimary" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:justificationMode="inter_word"
+                            android:text="@string/by_train_msg_1"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="#cc000000" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_8dp"
+                            android:fontFamily="@font/montserrat"
+                            android:justificationMode="inter_word"
+                            android:text="@string/by_train_msg_2"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="#cc000000" />
+
+                        <TextView
+                            android:id="@+id/btnTrainSchedules"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_8dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/train_schedule"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <!--By Train-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/default_16dp"
+                        tool:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/default_8dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/default_8dp"
+                                android:background="@drawable/circle_mask_primary"
+                                android:padding="@dimen/default_8dp"
+                                android:src="@drawable/ic_flight_takeoff_black_24dp"
+                                android:tint="@color/colorWhite" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="@string/label_by_plane"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="@color/colorPrimary" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/default_8dp"
+                            android:layout_marginTop="@dimen/default_16dp"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:text="@string/label_arrival_in_zaven"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="#414141"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:justificationMode="inter_word"
+                            android:text="@string/by_plane_info"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="#cc000000" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/default_8dp"
+                            android:layout_marginTop="@dimen/default_16dp"
+                            android:fontFamily="@font/ubuntu_medium"
+                            android:text="@string/label_arrival_in_south"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="#414141"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:justificationMode="inter_word"
+                            android:text="@string/by_plane_info_south"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="#cc000000" />
+
+                    </LinearLayout>
+
+                    <!--By Plane-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/default_16dp"
+                        tool:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/default_8dp"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="@dimen/default_8dp"
+                                android:background="@drawable/circle_mask_primary"
+                                android:padding="@dimen/default_8dp"
+                                android:src="@drawable/ic_directions_bus_black_24dp"
+                                android:tint="@color/colorWhite" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/ubuntu_medium"
+                                android:text="@string/label_by_bus"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="@color/colorPrimary" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:justificationMode="inter_word"
+                            android:text="@string/by_bus_info"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="#cc000000" />
+
+                        <TextView
+                            android:id="@+id/btnBusWebsite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/default_8dp"
+                            android:layout_marginTop="@dimen/default_8dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/label_tec_website"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:justificationMode="inter_word"
+                            android:text="@string/by_bus_info_2"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="#cc000000"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <!--By Bus-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto_light"
+                        android:padding="@dimen/default_16dp"
+                        android:text="@string/get_there_address"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#414141" />
+                </LinearLayout>
+
+                <!--Aula Magna Detail-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_16dp"
+                    android:gravity="top"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/aula_magna" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ebebeb"
+                        android:orientation="vertical"
+                        android:padding="@dimen/default_16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/default_8dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/aula_magna"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textColor="#cc000000" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:justificationMode="inter_word"
+                            android:text="@string/aula_magna_desc"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="#cc000000" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Louvain detail-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/louvain" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#ebebeb"
+                        android:orientation="vertical"
+                        android:padding="@dimen/default_16dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/default_8dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/lauvain_name"
+                            android:textAppearance="?android:textAppearanceLarge"
+                            android:textColor="#cc000000" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat"
+                            android:justificationMode="inter_word"
+                            android:text="@string/lauvain_desc"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColor="#cc000000" />
+
+                        <TextView
+                            android:id="@+id/btnAccessMap"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_8dp"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/label_access_map"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Taxis-->
+            <LinearLayout
+                android:id="@+id/viewTaxis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_2dp"
+                android:background="#88d3d3d3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/montserrat"
+                    android:paddingBottom="@dimen/default_16dp"
+                    android:paddingLeft="@dimen/default_8dp"
+                    android:paddingRight="@dimen/default_8dp"
+                    android:paddingTop="@dimen/default_16dp"
+                    android:text="@string/label_taxis"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/imageExpandTaxes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:tint="#000000"
+                    android:layout_marginRight="@dimen/default_24dp"
+                    android:padding="@dimen/default_4dp"
+                    android:src="@drawable/ic_arrow_right_black_24dp" />
+            </LinearLayout>
+
+            <!--Taxis Detail-->
+            <LinearLayout
+                android:id="@+id/viewTaxisDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/default_4dp"
+                android:layout_marginTop="@dimen/default_8dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <!--Taxi LLN-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_8dp"
+                        android:background="#11000000"
+                        android:fontFamily="@font/montserrat"
+                        android:padding="@dimen/default_8dp"
+                        android:text="@string/label_taxi_lln"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:paddingLeft="@dimen/default_8dp"
+                        android:text="@string/taxi_lln_address"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/default_16dp">
+
+                        <TextView
+                            android:id="@+id/btnTaxiLLNCall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="@string/tag_taxi_lln_call"
+                            android:text="@string/label_call"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/btnTaxiLLNWeb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:tag="@string/tag_website_taxi_lln"
+                            android:text="@string/label_open_website"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--Taxis Blancs d’Ottignies-LLN-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_8dp"
+                        android:background="#11000000"
+                        android:fontFamily="@font/montserrat"
+                        android:padding="@dimen/default_8dp"
+                        android:text="@string/label_taxi_blancs"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:paddingLeft="@dimen/default_8dp"
+                        android:text="@string/taxi_blancs_address"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/default_16dp">
+
+                        <TextView
+                            android:id="@+id/btnTaxiBlancsCall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="@string/tag_taxi_blancs_call"
+                            android:text="@string/label_call"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/btnTaxiBlancsWeb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:tag="@string/tag_website_taxi_blancs"
+                            android:text="@string/label_open_website"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--CD Taxi-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_8dp"
+                        android:background="#11000000"
+                        android:fontFamily="@font/montserrat"
+                        android:padding="@dimen/default_8dp"
+                        android:text="@string/label_taxi_cd"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:paddingLeft="@dimen/default_8dp"
+                        android:text="@string/taxi_cd_address"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/default_16dp">
+
+                        <TextView
+                            android:id="@+id/btnTaxiCDCall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="@string/tag_taxicd_call"
+                            android:text="@string/label_call"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--THEO Taxi-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_8dp"
+                        android:background="#11000000"
+                        android:fontFamily="@font/montserrat"
+                        android:padding="@dimen/default_8dp"
+                        android:text="@string/label_taxi_theo"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:paddingLeft="@dimen/default_8dp"
+                        android:text="@string/taxi_theo_address"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/default_16dp">
+
+                        <TextView
+                            android:id="@+id/btnTaxiTheoCall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="@string/tag_taxitheo_call"
+                            android:text="@string/label_call"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/btnTaxiTheoMail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:tag="@string/tag_mail_taxi_theo"
+                            android:text="@string/label_mail"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Taxi Broeckx-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_8dp"
+                        android:background="#11000000"
+                        android:fontFamily="@font/montserrat"
+                        android:padding="@dimen/default_8dp"
+                        android:text="@string/label_taxi_broeckx"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:paddingLeft="@dimen/default_8dp"
+                        android:text="@string/taxi_broeckx_address"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/default_16dp">
+
+                        <TextView
+                            android:id="@+id/btnTaxiBroeckxCall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="@string/tag_taxi_broeckx_call"
+                            android:text="@string/label_call"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/btnTaxiBroeckxMail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:tag="@string/tag_mail_taxi_broeckx"
+                            android:text="@string/label_mail"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/btnTaxiBroeckxWeb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:tag="@string/tag_website_taxi_broeckx"
+                            android:text="@string/label_open_website"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--AZ Taxi-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_8dp"
+                        android:background="#11000000"
+                        android:fontFamily="@font/montserrat"
+                        android:padding="@dimen/default_8dp"
+                        android:text="@string/label_taxi_az"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:paddingLeft="@dimen/default_8dp"
+                        android:text="@string/taxi_az_address"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/default_16dp">
+
+                        <TextView
+                            android:id="@+id/btnTaxiAZCall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="@string/tag_taxiaz_call"
+                            android:text="@string/label_call"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/btnTaxiAZMail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:tag="@string/tag_mail_taxi_az"
+                            android:text="@string/label_mail"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Taxi F. Clerbois-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_8dp"
+                        android:background="#11000000"
+                        android:fontFamily="@font/montserrat"
+                        android:padding="@dimen/default_8dp"
+                        android:text="@string/label_taxi_clerbois"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:paddingLeft="@dimen/default_8dp"
+                        android:text="@string/taxi_clerbois_address"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/default_16dp">
+
+                        <TextView
+                            android:id="@+id/btnTaxiClerboisCall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="@string/tag_taxi_clerbois_call"
+                            android:text="@string/label_call"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/btnTaxiClerboisWeb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:tag="@string/tag_website_taxi_clerbois"
+                            android:text="@string/label_open_website"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Taxis Claude & L. Francet-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_8dp"
+                        android:background="#11000000"
+                        android:fontFamily="@font/montserrat"
+                        android:padding="@dimen/default_8dp"
+                        android:text="@string/label_taxi_claude"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:paddingLeft="@dimen/default_8dp"
+                        android:text="@string/taxi_claude_address"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/default_16dp">
+
+                        <TextView
+                            android:id="@+id/btnTaxiClaudeCall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="@string/tag_taxi_claude_call"
+                            android:text="@string/label_call"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/btnTaxiClaudeWeb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:tag="@string/tag_website_taxi_claude"
+                            android:text="@string/label_open_website"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--New taxis de la Dyle-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_8dp"
+                        android:background="#11000000"
+                        android:fontFamily="@font/montserrat"
+                        android:padding="@dimen/default_8dp"
+                        android:text="@string/label_taxi_dyle"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:paddingLeft="@dimen/default_8dp"
+                        android:text="@string/taxi_dyle_address"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/default_16dp">
+
+                        <TextView
+                            android:id="@+id/btnTaxiDyleCall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="@string/tag_taxi_dyle_call"
+                            android:text="@string/label_call"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/btnTaxiDyleWeb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:tag="@string/tag_website_taxi_dyle"
+                            android:text="@string/label_open_website"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--Taxi Social-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_8dp"
+                        android:background="#11000000"
+                        android:fontFamily="@font/montserrat"
+                        android:padding="@dimen/default_8dp"
+                        android:text="@string/label_taxi_social"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:paddingLeft="@dimen/default_8dp"
+                        android:text="@string/taxi_social_address"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/default_16dp">
+
+                        <TextView
+                            android:id="@+id/btnTaxiSocialCall"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:tag="@string/tag_taxi_social_call"
+                            android:text="@string/label_call"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/btnTaxiSocialWeb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:tag="@string/tag_website_taxi_social"
+                            android:text="@string/label_open_website"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--BUS 105-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/default_8dp"
+                        android:background="#11000000"
+                        android:fontFamily="@font/montserrat"
+                        android:padding="@dimen/default_8dp"
+                        android:text="@string/label_taxi_bus"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="#cc000000" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat"
+                        android:justificationMode="inter_word"
+                        android:paddingLeft="@dimen/default_8dp"
+                        android:text="@string/taxi_bus_address"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:textColor="#cc000000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/default_16dp">
+
+                        <TextView
+                            android:id="@+id/btnTaxiBusWeb"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat"
+                            android:tag="@string/tag_website_taxi_bus"
+                            android:text="@string/label_open_website"
+                            android:textAppearance="?android:textAppearanceMedium"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Contact-->
+            <LinearLayout
+                android:id="@+id/viewContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_2dp"
+                android:layout_marginBottom="8dp"
+                android:background="#88d3d3d3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/montserrat"
+                    android:paddingBottom="@dimen/default_16dp"
+                    android:paddingLeft="@dimen/default_8dp"
+                    android:paddingRight="@dimen/default_8dp"
+                    android:paddingTop="@dimen/default_16dp"
+                    android:text="@string/label_contact"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:textColor="#000000" />
+
+                <ImageView
+                    android:id="@+id/imageExpandContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:tint="#000000"
+                    android:layout_marginRight="@dimen/default_24dp"
+                    android:padding="@dimen/default_4dp"
+                    android:src="@drawable/ic_arrow_right_black_24dp" />
+            </LinearLayout>
+
+            <!--Contact Detail-->
+            <TextView
+                android:id="@+id/contactUs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lato_light"
+                android:padding="@dimen/default_16dp"
+                android:tag="0032473374083"
+                android:textColor="#cc000000"
+                android:layout_marginLeft="@dimen/default_4dp"
+                android:text="@string/for_more_info"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:visibility="gone" />
+
         </LinearLayout>
     </LinearLayout>
-</android.support.v4.widget.NestedScrollView>
+</androidx.core.widget.NestedScrollView>

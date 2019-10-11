@@ -8,18 +8,21 @@ import android.content.IntentFilter;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.content.LocalBroadcastManager;
-import android.support.v4.content.res.ResourcesCompat;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
+import androidx.core.content.ContextCompat;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.core.content.res.ResourcesCompat;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import android.text.Layout;
 import android.text.SpannableStringBuilder;
 import android.text.StaticLayout;
 import android.text.TextUtils;
 import android.text.style.AbsoluteSizeSpan;
 import android.text.style.StyleSpan;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -66,6 +69,7 @@ public class FragScheduledTracks extends OdooFragment implements SwipeRefreshLay
     private List<Integer> filterLocationIds = new ArrayList<>();
     private ViewSwitcher viewSwitcher;
     private SessionReminder sessionReminder;
+    private int recentlyViewedPosition = -1;
 
 
     public void setFragmentXP(FragmentXPSchedule schedule) {
@@ -93,7 +97,8 @@ public class FragScheduledTracks extends OdooFragment implements SwipeRefreshLay
     }
 
     private List<ORecord> getRecords() {
-        String where = "DATE(date) = ?";
+        //id = 1814 = event replaced by another event. quick fix because of odoo days are live
+        String where = "DATE(date) = ? AND id != 1814";
         List<String> argVals = new ArrayList<>();
         argVals.add(getArguments().getString(KEY_DATE));
         if (!filterLocationIds.isEmpty()) {
@@ -123,7 +128,7 @@ public class FragScheduledTracks extends OdooFragment implements SwipeRefreshLay
 
     private void showRecords() {
         List<ORecord> records = getRecords();
-        if (recyclerView.getItemDecorationAt(0) != null) {
+        if (recyclerView.getItemDecorationCount() > 0 && recyclerView.getItemDecorationAt(0) != null) {
             recyclerView.removeItemDecoration(recyclerView.getItemDecorationAt(0));
         }
         adapter = new RecyclerAdapter(getContext(), records);
@@ -183,6 +188,9 @@ public class FragScheduledTracks extends OdooFragment implements SwipeRefreshLay
         LocalBroadcastManager.getInstance(getContext())
                 .registerReceiver(syncStatus, new IntentFilter(OdooDataService.TAG));
         showRecords();
+        if (recentlyViewedPosition > -1) {
+            recyclerView.scrollToPosition(recentlyViewedPosition);
+        }
     }
 
 
@@ -313,6 +321,7 @@ public class FragScheduledTracks extends OdooFragment implements SwipeRefreshLay
     @Override
     public void onItemViewClick(RVHolder holder, int position, ORecord record) {
         if (!record.getString("partner_name").equals("false")) {
+            recentlyViewedPosition = position;
             Intent intent = new Intent(getContext(), ScheduleDetail.class);
             intent.putExtra(ScheduleDetail.KEY_TRACK_ID, record.getInt("id"));
             startActivity(intent);
